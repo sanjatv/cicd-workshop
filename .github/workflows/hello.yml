@@ -1,0 +1,12 @@
+name: hello-workshop
+on:
+    push:
+        branches:  [main]
+    workflow_dispatch:
+
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: hello
+              run: echo "Hei, mitt navn er ${{ github.actor }}!"
